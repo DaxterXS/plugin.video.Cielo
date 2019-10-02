@@ -2,14 +2,14 @@ import re
 import xbmcgui
 import requests
 
-url = 'http://videoplatform.sky.it/player/cta/cta.json'
+url = 'https://videoplatform.sky.it/player/json/get_livestream_2.json'
 res = requests.get(url)
 
 try:
 	streaming_url = 'https://' + re.findall('"streaming_url":"https{0,1}://(.*?)"', res.text)[0]
 	thumb_url = 'https://' + re.findall('"img":"https{0,1}://(.*?)"', res.text)[1]
-	listitem = xbmcgui.ListItem('CIelo')
-	listitem.setInfo('video', {'Title': 'Diretta Cielo'})
+	listitem = xbmcgui.ListItem('Cielo TV')
+	listitem.setInfo('video', {'Title': 'Cielo TV'})
 	listitem.setArt({ 'thumb': thumb_url})
 	xbmc.Player().play(streaming_url, listitem)
 
