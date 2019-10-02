@@ -1,6 +1,6 @@
-# Diretta SkyTG24 Kodi plugin
+# Diretta Cielo Kodi plugin
 
-Kodi unofficial plugin to stream Sky Tg24 from the official website.
+Kodi unofficial plugin to stream Cielo from the official website.
 
 ## Installation
 
