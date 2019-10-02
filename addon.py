@@ -2,7 +2,7 @@ import re
 import xbmcgui
 import requests
 
-url = 'https://videoplatform.sky.it/player/json/get_livestream_2.json'
+url = 'https://videoplatform.sky.it/player/json/get_livestream_2.json?callback=getLive&_=1570036301745'
 res = requests.get(url)
 
 try:
