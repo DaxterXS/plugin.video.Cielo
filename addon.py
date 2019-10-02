@@ -6,7 +6,7 @@ url = 'https://videoplatform.sky.it/player/json/get_livestream_2.json?callback=g
 res = requests.get(url)
 
 try:
-	streaming_url = 'https://' + re.findall('"streaming_url":"https{0,1}://(.*?)"', res.text)[0]
+	streaming_url = 'https://skyanywhere3-i.akamaihd.net/hls/live/510693/cielo/stream2/streamPlaylist.m3u8'
 	thumb_url = 'https://' + re.findall('"img":"https{0,1}://(.*?)"', res.text)[1]
 	listitem = xbmcgui.ListItem('Cielo TV')
 	listitem.setInfo('video', {'Title': 'Cielo TV'})
